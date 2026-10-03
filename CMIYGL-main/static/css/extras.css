@@ -1,0 +1,41 @@
+/* Signature styling (driven by static/js/app.js) */
+.signature-box {
+  font-family: var(--sig-font, 'Rock Salt'), cursive !important;
+  color: var(--sig-ink, #000);
+  text-align: center;
+  transform: scale(var(--sig-scale, 1));
+  transform-origin: center;
+  white-space: nowrap;
+}
+.btn-color-pick { height: 48px !important; }
+.x-custom { position: relative; overflow: hidden; padding: 0 !important;
+  background: conic-gradient(#f4a08c, #f5b971, #cfe39a, #9ad0f0, #c9b8e8, #f4a08c) !important; }
+.x-custom input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+
+/* Bottom dock */
+#x-dock { position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 1100;
+  font-family: Lato, sans-serif; display: none; text-align: center; }
+.x-bar { display: inline-flex; gap: 6px; padding: 6px; border-radius: 999px;
+  background: #faefcf; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+.x-bar button { border: 0; border-radius: 999px; padding: 8px 16px; font-size: 12px; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase; color: #faefcf; background: #68c9d2; cursor: pointer;
+  transition: color .2s, background .2s; }
+.x-bar button:hover { color: #68c9d2; background: #fff; }
+#x-dock[data-mode="form"] .x-bar [data-m="result"],
+#x-dock[data-mode="result"] .x-bar [data-m="form"] { display: none; }
+#x-panel { margin-bottom: 10px; padding: 12px 14px; border-radius: 14px; background: #faefcf;
+  color: #492b1a; box-shadow: 0 6px 20px rgba(0,0,0,.25); text-align: left; width: 260px; }
+#x-panel[hidden] { display: none; }
+.x-title { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+.x-row { display: flex; gap: 6px; margin-bottom: 10px; }
+.x-row button { flex: 1; height: 34px; border: 2px solid transparent; border-radius: 8px; background: #fff;
+  font-size: 18px; color: #000; cursor: pointer; }
+#x-inks { justify-content: space-between; }
+#x-inks button { flex: 0 0 26px; width: 26px; height: 26px; border-radius: 50%; }
+.x-row button.on { border-color: #68c9d2; box-shadow: 0 0 0 2px #fff inset; }
+.x-size { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+.x-size input { flex: 1; }
+#x-toast { position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, 0); margin-bottom: 10px;
+  padding: 6px 12px; border-radius: 8px; background: #492b1a; color: #faefcf; font-size: 12px;
+  opacity: 0; pointer-events: none; transition: opacity .2s; white-space: nowrap; }
+#x-toast.show { opacity: 1; }
